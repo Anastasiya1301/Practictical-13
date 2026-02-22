@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обчислення площі прямокутного трикутника</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script language="JavaScript">
+        function area(a, h) {
+            form1.output1.value = (a.value * h.value) / 2;
+        }
+    </script>
+</head>
+
+<body>
+    <!--1-->
+    <p>Обчислення площі прямокутного трикутника</p>
+
+    <form name="form1">
+        <fieldset style="width: 40%">
+            <legend>Введення даних</legend>
+            Основа: <input type="text" size="7" name="st1">
+            Висота: <input type="text" size="7" name="st2"><br>
+        </fieldset>
+
+        <fieldset style="width: 40%">
+            <legend>Обробка та виведення даних</legend>
+            Площа: <input type="text" size="7" name="output1" readonly><br>
+            <input type="button" value="Обчислити" style="margin:10px"
+                   onclick="area(form1.st1, form1.st2)">
+        </fieldset>
+    </form>
+
+    <!--2-->
+
+    <hr>
+
+<h3>Анкета для перекладачів</h3>
+Вкажіть ті мови, якими ви володієте досконало: <br>
+
+<script language="JavaScript">
+function grant() {
+    var d = document;
+    var k = 0;
+
+    if (d.form2.elements[0].checked)
+        k = k + Number(d.form2.elements[0].value);
+    if (d.form2.elements[1].checked)
+        k = k + Number(d.form2.elements[1].value);
+    if (d.form2.elements[2].checked)
+        k = k + Number(d.form2.elements[2].value);
+    if (d.form2.elements[3].checked)
+        k = k + Number(d.form2.elements[3].value);
+    if (d.form2.elements[4].checked)
+        k = k + Number(d.form2.elements[4].value);
+    if (d.form2.elements[5].checked)
+        k = k + Number(d.form2.elements[5].value);
+    if (d.form2.elements[6].checked)
+        k = k + Number(d.form2.elements[6].value);
+
+    d.form2.output1.value = k;
+}
+</script>
+
+<form name="form2">
+    <input type="checkbox" name="lan" value="100"> російська <br>
+    <input type="checkbox" name="lan" value="200"> англійська <br>
+    <input type="checkbox" name="lan" value="300"> французька <br>
+    <input type="checkbox" name="lan" value="400"> німецька <br>
+    <input type="checkbox" name="lan" value="500"> китайська <br>
+    <input type="checkbox" name="lan" value="600"> японська <br>
+    <input type="checkbox" name="lan" value="1000"> українська <br><br>
+
+    Винагорода:
+    <input type="text" name="output1" size="10" readonly><br><br>
+
+    <input type="button" value="Винагорода" onclick="grant()">
+    <input type="reset" value="Відмінити">
+</form>
+
+<!--3-->
+<hr>
+
+<h3>Анкета</h3>
+
+<h2>Зареєструватися</h2>
+<p>Це безкоштовно і так буде завжди.</p>
+
+<form>
+    <input type="text" placeholder="Ім'я" size="20">
+    <input type="text" placeholder="Прізвище" size="20"><br><br>
+
+    <input type="text" placeholder="Номер мобільного телефону або ел. пошта" size="45"><br><br>
+
+    <input type="password" placeholder="Новий пароль" size="45"><br><br>
+
+    <label>День народження:</label><br>
+    <select>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+        <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+        <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+        <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+        <option>31</option>
+    </select>
+
+    <select>
+        <option>січень</option>
+        <option>лютий</option>
+        <option>березень</option>
+        <option>квітень</option>
+        <option>травень</option>
+        <option>червень</option>
+        <option>липень</option>
+        <option>серпень</option>
+        <option>вересень</option>
+        <option>жовтень</option>
+        <option>листопад</option>
+        <option>грудень</option>
+    </select>
+
+    <select>
+        <option>1990</option><option>1991</option><option>1992</option><option>1993</option>
+        <option>1994</option><option>1995</option><option>1996</option><option>1997</option>
+        <option>1998</option><option>1999</option><option>2000</option><option>2001</option>
+        <option>2002</option><option>2003</option><option>2004</option><option>2005</option>
+        <option>2006</option><option>2007</option><option>2008</option>
+    </select>
+
+    <br><br>
+
+    <label>Стать:</label><br>
+    <input type="radio" name="sex"> жінка
+    <input type="radio" name="sex"> чоловік
+    <input type="radio" name="sex"> інше
+
+    <br><br>
+
+    <input type="submit" value="Зареєструватися" style="background:green; color:white; padding:8px 20px; border:none; border-radius:5px;">
+</form>
+</body>
+</html>
